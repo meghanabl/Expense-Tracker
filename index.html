@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+</head>
+
+<body>
+  
+  <!-- AUTH -->
+  <div id="auth">
+    <input id="email" placeholder="Email">
+    <input id="password" type="password" placeholder="Password">
+    <button onclick="register()">Register</button>
+    <button onclick="login()">Login</button>
+  </div>
+
+  <!-- APP -->
+  <div id="app" style="display:none;">
+<h1 class="app-title">Expense Tracker</h1>
+    <h3>Add Expense</h3>
+    <input id="title" placeholder="Expense title">
+    <input id="amount" type="number" placeholder="Amount">
+    <button onclick="addExpense()">Add</button>
+
+    <h3>Your Expenses</h3>
+    <ul id="list"></ul>
+
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
